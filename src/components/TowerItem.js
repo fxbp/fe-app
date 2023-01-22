@@ -1,5 +1,6 @@
-import { ListItem, ListItemAvatar, ListItemText } from "@mui/material"
+import { Grid } from "@mui/material"
 import TowerIcon from "../icons/Torre.png"
+import IncreaseDecreaseComponent from "./IncreaseDecreaseComponent"
 
 
 
@@ -9,14 +10,24 @@ const TowerItem = ({towerName, totalShrines, totalKoroks}) =>{
     console.log(towerName,totalShrines,totalKoroks)
   
     return (
-        <ListItem>
-            <ListItemAvatar>
-                <TowerIcon />
-            </ListItemAvatar>
-            <ListItemText
-                primary={towerName}
-            />
-        </ListItem>
+        <Grid container  display="flex" columns={{ xs: 1, sm: 12 }} border='2px solid black'>
+            <Grid item  xs={4} alignItems="center" display="flex">
+               <img src={TowerIcon} width={30} alt="tower icon"/>
+               
+               <div >{towerName}</div>
+            </Grid>
+            
+            <Grid item  xs={2} sm={4} display="flex" alignItems="center" >
+                <p>Shrines</p>
+                <IncreaseDecreaseComponent />
+            </Grid>
+            <Grid item  xs={2} sm={4} display="flex" alignItems="center">
+                <p>Koroks</p>
+                <IncreaseDecreaseComponent />
+            </Grid>
+                
+           
+        </Grid>
     );
 
 }
