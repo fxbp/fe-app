@@ -1,3 +1,4 @@
+import { List } from "@mui/material";
 import TowerItem from "./TowerItem";
 
 
@@ -9,14 +10,18 @@ const TowerList = ({towerListDefinition}) => {
         <div>
             <p> this is a tower list</p>
             {
-                towerListDefinition && towerListDefinition.map((towerItem, index) =>
-                    <TowerItem 
-                        key={index}
-                        towerName = {towerItem?towerItem.towerName:"NO_NAME"}
-                        totalShrines = {towerItem?towerItem.shrines.length:0}
-                        totalKoroks = {towerItem?towerItem.totalKoroks:0}
-                    />
-                )
+                <List >
+                    { 
+                        towerListDefinition && towerListDefinition.map((towerItem, index) => {
+                        return <TowerItem 
+                            key={index}
+                            towerName = {towerItem?towerItem.towerName:"NO_NAME"}
+                            totalShrines = {towerItem?towerItem.shrines.length:0}
+                            totalKoroks = {towerItem?towerItem.totalKoroks:0}
+                        />
+                    })
+                    }
+                </List>
             }
         </div>
         );

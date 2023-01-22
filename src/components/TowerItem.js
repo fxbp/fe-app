@@ -1,13 +1,22 @@
+import { ListItem, ListItemAvatar, ListItemText } from "@mui/material"
+import TowerIcon from "../icons/Torre.png"
+
 
 
 const TowerItem = ({towerName, totalShrines, totalKoroks}) =>{
 
-    console.log("Tower Item: ")
-    console.log(towerName)
-    console.log(totalShrines)
-    console.log(totalKoroks)
+    console.log("tower Item")
+    console.log(towerName,totalShrines,totalKoroks)
+  
     return (
-        <p>This is an Item</p>
+        <ListItem>
+            <ListItemAvatar>
+                <TowerIcon />
+            </ListItemAvatar>
+            <ListItemText
+                primary={towerName}
+            />
+        </ListItem>
     );
 
 }
