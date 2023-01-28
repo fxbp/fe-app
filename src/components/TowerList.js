@@ -4,7 +4,7 @@ import TowerItem from "./TowerItem";
 
 const TowerList = ({towerListDefinition}) => {
 
-    console.log(`TowerList: ${JSON.stringify(towerListDefinition)}`);
+
 
     return(
         <div>

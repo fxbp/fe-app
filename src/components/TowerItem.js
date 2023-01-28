@@ -6,8 +6,7 @@ import IncreaseDecreaseComponent from "./IncreaseDecreaseComponent"
 
 const TowerItem = ({towerName, totalShrines, totalKoroks}) =>{
 
-    console.log("tower Item")
-    console.log(towerName,totalShrines,totalKoroks)
+  
   
     return (
         <Grid container  display="flex" columns={{ xs: 1, sm: 12 }} border='2px solid black'>
