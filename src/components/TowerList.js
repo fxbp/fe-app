@@ -9,21 +9,8 @@ const TowerList = ({ towerListDefinition }) => {
                 {towerListDefinition &&
                     towerListDefinition.map((towerItem, index) => {
                         return (
-                            <Grid item xs={12}>
-                                <TowerItem
-                                    key={index}
-                                    towerName={
-                                        towerItem
-                                            ? towerItem.towerName
-                                            : 'NO_NAME'
-                                    }
-                                    totalShrines={
-                                        towerItem ? towerItem.shrines.length : 0
-                                    }
-                                    totalKoroks={
-                                        towerItem ? towerItem.totalKoroks : 0
-                                    }
-                                />
+                            <Grid item xs={12} key={index}>
+                                <TowerItem towerDefinition={towerItem} />
                             </Grid>
                         )
                     })}

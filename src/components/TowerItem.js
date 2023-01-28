@@ -1,8 +1,10 @@
-import { Grid } from "@mui/material";
-import TowerIcon from "../icons/Torre.png";
-import IncreaseDecreaseComponent from "./IncreaseDecreaseComponent";
+import { Grid } from '@mui/material'
+import TowerIcon from '../icons/Torre.png'
+import IncreaseDecreaseComponent from './IncreaseDecreaseComponent'
 
-const TowerItem = ({ towerName, totalShrines, totalKoroks }) => {
+const TowerItem = ({ towerDefinition }) => {
+    const { towerName } = towerDefinition
+
     return (
         <Grid
             container
@@ -25,7 +27,7 @@ const TowerItem = ({ towerName, totalShrines, totalKoroks }) => {
                 <IncreaseDecreaseComponent />
             </Grid>
         </Grid>
-    );
-};
+    )
+}
 
-export default TowerItem;
+export default TowerItem
