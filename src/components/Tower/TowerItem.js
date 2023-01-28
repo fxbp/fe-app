@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material'
-import TowerIcon from '../icons/Torre.png'
-import IncreaseDecreaseComponent from './IncreaseDecreaseComponent'
+import TowerIcon from '../../icons/Torre.png'
+import IncreaseDecreaseComponent from '../IncreaseDecrease/IncreaseDecreaseComponent'
 
 const TowerItem = ({ towerDefinition }) => {
     const { towerName } = towerDefinition

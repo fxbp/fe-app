@@ -1,4 +1,4 @@
-import TowerList from '../components/TowerList';
+import TowerList from '../components/Tower/TowerList';
 
 import { TowerDefinitionAPI } from '../Api/TowerDefinitionAPI';
 import { useEffect, useState } from 'react';
